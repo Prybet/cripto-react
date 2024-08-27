@@ -33,6 +33,7 @@ function App() {
       <div>
         <Heading> Cotiza Criptomonedas al instante</Heading>
         <Form setCurrencies={setCurrencies} />
+        <pre>*CLP is not supported for the API</pre>
         {loading && <Spinner />}
         {response.PRICE && <Result response={response} />}
 
@@ -53,6 +54,10 @@ const Container = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 2rem;
+  }
+
+  pre{
+    color: white;
   }
 `;
 
